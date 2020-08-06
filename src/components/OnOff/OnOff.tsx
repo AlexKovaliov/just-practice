@@ -19,7 +19,6 @@ export function OnOff(props: PropsType) {
         backgroundColor: on ? "green" : "#E9F7EF" // тернарное выражение
     }
 
-
     let offStyle = {
         width: "60px",
         height: "40px",
