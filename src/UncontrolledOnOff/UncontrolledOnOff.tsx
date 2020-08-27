@@ -1,16 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 type PropsType = {
-    on: boolean,
     onChange: (on: boolean) => void
 }
 
 
-export function OnOff(props: PropsType) {
+export function UncontrolledOnOff(props: PropsType) {
+    let [on, setOn] = useState(false)
 
 
-
-    let onStyle = {
+    const onStyle = {
         width: "60px",
         height: "40px",
         border: "1px solid black",
@@ -19,10 +18,10 @@ export function OnOff(props: PropsType) {
         marginLeft: "5px",
         padding: "5px",
         cursor: "pointer",
-        backgroundColor: props.on ? "green" : "#E9F7EF" // тернарное выражение
+        backgroundColor: on ? "green" : "#E9F7EF" // тернарное выражение
     }
 
-    let offStyle = {
+    const offStyle = {
         width: "60px",
         height: "40px",
         border: "1px solid black",
@@ -31,10 +30,10 @@ export function OnOff(props: PropsType) {
         marginLeft: "5px",
         padding: "5px",
         cursor: "pointer",
-        backgroundColor: props.on ? "#FDEDEC" : "red"
+        backgroundColor: on ? "#FDEDEC" : "red"
     }
 
-    let indStyle = {
+    const indStyle = {
         width: "35px",
         height: "35px",
         borderRadius: "25px",
@@ -42,17 +41,31 @@ export function OnOff(props: PropsType) {
         display: "inline-block",
         marginLeft: "5px",
         padding: "5px",
-        backgroundColor: props.on ? "green" : "red"
+        backgroundColor: on ? "green" : "red"
+    }
+
+    const onClicked = () => {
+        setOn(true)
+        props.onChange(true)
+    }
+
+    const offClicked = () => {
+        setOn(false)
+        props.onChange(false)
     }
 
     return (
         <div>
-            <span style={onStyle} onClick={() => {
-                props.onChange(true)
-            }}>On</span>
-            <span style={offStyle} onClick={() => {
-                props.onChange(false)
-            }}>Off</span>
+            <span style={onStyle}
+                  onClick={onClicked}>
+                On
+            </span>
+
+            <span style={offStyle}
+                  onClick={offClicked}>
+                Off
+            </span>
+
             <span style={indStyle}>light</span>
         </div>
     )
