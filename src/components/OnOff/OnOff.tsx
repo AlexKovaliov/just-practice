@@ -9,7 +9,6 @@ type PropsType = {
 export function OnOff(props: PropsType) {
 
 
-
     let onStyle = {
         width: "60px",
         height: "40px",
