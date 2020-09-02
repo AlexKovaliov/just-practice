@@ -34,7 +34,7 @@ export function App() {
 
             <UncontrolledAccordion titleValue={"Menu"}/>
 
-            <UncontrolledRating/>
+            <UncontrolledRating />
 
         </div>
     )

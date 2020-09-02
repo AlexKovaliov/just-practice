@@ -17,6 +17,8 @@ export const MenuCollapsedMode = () => <Accordion titleValue={"MENU"}
                                                   items={[]}
                                                   onClick={onClickCallback}/>;
 
+/////////////////////////////////////////////////////////////////////////////////////////////
+
 export const UsersUncollapsedMode = () => <Accordion titleValue={"USERS"}
                                                      collapsed={false}
                                                      onChange={callback}
@@ -25,6 +27,8 @@ export const UsersUncollapsedMode = () => <Accordion titleValue={"USERS"}
                                                          {title: "Jeff Bezos", value: 1964},
                                                          {title: "Elon Musk", value: 1971}]}
 />;
+
+//////////////////////////////////////////////////////////////////////////////////////////////
 
 export const ModeChanging = () => {
     const [value, setValue] = useState<boolean>(true);
