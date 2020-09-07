@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {UncontrolledOnOff} from './UncontrolledOnOff';
-import {OnOff} from "../components/OnOff/OnOff";
+import {OnOff} from "../OnOff/OnOff";
 import {action} from "@storybook/addon-actions";
 
 
