@@ -14,7 +14,7 @@ const NewMessagesCounter = (props: any) => {
     )
 }
 
-type UsersType = {
+export type UsersType = {
     users: Array<string>
 }
 
